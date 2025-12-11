@@ -96,7 +96,7 @@ main {
 /*glass*/
 
 .glass {
-    background: rgba(255, 255, 255, 0.08);
+    background: white;
     backdrop-filter: blur(15px);
     border-radius: 25px;
     border: 1px solid rgba(255,255,255,0.2);
@@ -105,13 +105,22 @@ main {
 }
 
 
+/*divider*/
+
+.divider {
+    height: 2px; 
+    background-color: #ccc; 
+    width: 65%; 
+    margin: 40px auto; 
+}
+
 /*header*/
 
 header {
     position: sticky;
     top: 0;
     z-index: 100;
-/*    background: rgba(0,0,0,0.6);*/
+    background: rgba(255, 255, 255, 1);
     backdrop-filter: blur(5px);
     padding: 15px 40px;
 }
@@ -158,10 +167,9 @@ header {
 /*footer*/
 
 footer {
-    position: sticky;
     z-index: 100;
     bottom: 0;
-/*    background: rgba(0,0,0,0.6);*/
+/*    background: rgba(255,255,255,0.6);*/
     backdrop-filter: blur(5px);
     padding: 15px 40px;
     text-align:center;
@@ -199,7 +207,7 @@ footer {
 
 .services__title{
     text-align:center;
-    margin:10px 0;
+    margin:40px 0;
     color:black;
     font-size:20px;
 }
@@ -242,7 +250,7 @@ footer {
 
 .cards__title {
     text-align: center;
-    margin: 10px 0;
+    margin: 40px 0;
     color: black;
     font-size: 20px;
 }
