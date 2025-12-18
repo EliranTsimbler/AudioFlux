@@ -6,8 +6,10 @@
 }
 
 html, body {
-    height: 100%;
+    min-height: 100%;
     margin: 0;
+    scroll-behavior: smooth;
+
 }
 
 body {
@@ -16,8 +18,14 @@ body {
     min-height: 100vh;
     line-height: 1.6;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #020617);
+    background: linear-gradient(135deg, #311B92, #020617);
     color: #e5e7eb;
+    background-color: #020617;
+            background-image:
+                radial-gradient(at 20% 30%, hsla(160, 80%, 50%, 0.4) 0px, transparent 50%),
+                radial-gradient(at 40% 45%, hsla(190, 90%, 50%, 0.4) 0px, transparent 55%),
+                radial-gradient(at 60% 55%, hsla(240, 80%, 60%, 0.4) 0px, transparent 55%),
+                radial-gradient(at 80% 70%, hsla(280, 85%, 55%, 0.4) 0px, transparent 50%);
 }
 
 main {
@@ -28,6 +36,65 @@ main {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* hero */
+
+
+.hero {
+    min-height: 70vh;         
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;                 
+    padding: 0 20px;    
+    
+    background-image: url(imgs/hero-img1.svg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;        
+}
+
+.hero h1 {
+    font-size: 64px;        
+    font-weight: 700;
+}
+
+.hero p {
+    max-width: 520px;      
+    opacity: 0.9;  
+    line-height: 26px;         
+}
+
+.hero-btn {
+    padding: 14px 34px;
+    border-radius: 999px;
+    background-image: linear-gradient(to right, #6a3093 0%, #a044ff  51%, #6a3093  100%);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+    color: white;            
+    text-transform: uppercase;
+    background-size: 200% auto;
+
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(90,75,255,0.4);
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+/* active */
+
+.navbar a.active, .footer__navbar a.active {
+    color: #8b7cff;
+    border-bottom: 2px solid #8b7cff;
 }
 
 
@@ -99,7 +166,7 @@ main {
     height: 2px;
     width: 65%;
     margin: 60px auto;
-    background: linear-gradient( 90deg, transparent, rgba(139,92,246,0.6), transparent );
+    background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.8), transparent );
 }
 
 /*header*/
@@ -162,13 +229,13 @@ footer {
     text-align: center;
     margin-top: 80px;
     padding: 30px 40px;
-    background: linear-gradient( 180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.95) );
+    /* background: linear-gradient( 180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.95) ); */
+    background: transparent;
     backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 footer p {
-    color: #94a3b8;
+    color: #cbd5f5;
     font-size: 14px;
 }
 
@@ -197,26 +264,47 @@ footer p {
 
 
 .footer__title {
-    transition: 0.3s;
-    width: 15%;
-    background: linear-gradient(90deg, #8b5cf6, #38bdf8);
-    border-radius: 20px;
+    min-width: 200px;
+    border-radius: 999px;
+    background-image: linear-gradient(to right, #6a3093 0%, #a044ff  51%, #6a3093  100%);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+    color: white;            
+    background-size: 200% auto;
+    cursor: default;
+    
 }
 
 .footer__title:hover {
-    color: white;
-    transform: scale(1.05);
+    transform: translateY(-3px);
+    background-position: right center;
+    color: #fff;
+    cursor: default;
 }
 
-
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 /*services*/
 
-.services__title{
+.services__title h2{
     text-align:center;
-    margin:40px 0;
+    margin-top:40px;
     color:white;
-    font-size:20px;
+    font-size: 40px;
 }
+
+.services__title p{
+    text-align:center;
+    margin-top:5px;
+    margin-bottom: 40px;
+    color:#e5e7eb9d;
+    font-size:1.2rem;
+}
+
 
 .services__wrap {
     display: flex;
@@ -250,25 +338,38 @@ footer p {
 
 .services__item:hover {
     transform: translateY(-6px) scale(1.05);
-    box-shadow:0 0 20px #8b5cf6,0 30px 60px rgba(0,0,0,0.7);
+    border:1px solid rgba(255, 255, 255, 0.7)
 }
 
 
 .services__item img {
     width: 70px;
     margin-bottom: 12px;
-    filter:invert();
 }
 
+.services__item h3{
+    text-align:center;
+    margin-top:5px;
+    margin-bottom: 5px;
+    color:#ffffff;
+    font-size:1.4rem;
+}
+
+.services__item p{
+    text-align:center;
+    margin-bottom: 5px;
+    color:#cbd5f5;
+    font-size: 1rem;
+}
 
 /*cards*/
 
 
-.cards__title {
+.cards__title h2 {
     text-align: center;
     margin: 40px 0;
     color: white;
-    font-size: 20px;
+    font-size: 40px;
 }
 
 .cards__wrap {
@@ -276,6 +377,7 @@ footer p {
     justify-content: center;
     gap: 40px;
     padding: 40px;
+    
 }
 
 .cards__item {
@@ -288,11 +390,13 @@ footer p {
     border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 25px 60px rgba(0,0,0,0.7);
     transition: 0.35s ease;
+    cursor: default;
 }
 
 .cards__item:hover {
     transform: translateY(-10px) scale(1.04);
-    box-shadow:0 0 20px #8b5cf6,0 30px 60px rgba(0,0,0,0.7);
+    border:1px solid rgba(255, 255, 255, 0.7)
+
 }
 
 
@@ -391,3 +495,25 @@ footer p {
 .btn:hover{
     transform:scale(1.1);
 }
+
+
+         .btn-grad {background-image: linear-gradient(to right, #6a3093 0%, #a044ff  51%, #6a3093  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
