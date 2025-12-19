@@ -9,7 +9,7 @@ html, body {
     min-height: 100%;
     margin: 0;
     scroll-behavior:smooth;
-
+    scroll-padding: 190px;
 }
 
 body {
@@ -644,6 +644,7 @@ footer p {
     transform: scale(1.25);
     box-shadow: 0 0 25px rgba(160, 68, 255, 0.9);
 }
+
 
 
 
