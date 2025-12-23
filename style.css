@@ -287,6 +287,8 @@ footer p {
     justify-content: center;
     gap: 10px;
 }
+
+
 /*services*/
 
 .services__title h2{
@@ -308,15 +310,22 @@ footer p {
 .services__wrap {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     background: rgba(15, 23, 42, 0.6);
     border-radius: 30px;
     padding: 40px;
+    flex-wrap: wrap;
 }
 
 .services__wrap a{
-    width: calc(100% / 3 - 10px);
+    width: calc((100% - 60px) / 3);
     text-decoration:none;
+}
+
+.services__item .services_info{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #cbd5f5;
 }
 
 .services__item {
@@ -333,13 +342,13 @@ footer p {
     border: 1px solid rgba(255,255,255,0.06);
     box-shadow: 0 15px 35px rgba(0,0,0,0.6);
     transition: 0.3s ease;
+    min-height: 100%;
 }
 
 .services__item:hover {
     transform: translateY(-6px) scale(1.05);
     border:1px solid rgba(255, 255, 255, 0.7)
 }
-
 
 .services__item img {
     width: 70px;
@@ -356,7 +365,7 @@ footer p {
 
 .services__item p{
     text-align:center;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     color:#cbd5f5;
     font-size: 1rem;
 }
@@ -364,7 +373,7 @@ footer p {
 /*cards*/
 
 .cards__like{
-    margin-top:50px;
+    margin-top:30px;
     width:30px;
     height: 30px;
     transition:0.3s ease;
@@ -490,7 +499,7 @@ footer p {
 .info {
     margin-top: 10px;
     font-size: 12px;
-    color: #fff;
+    color: #cbd5f5;
 }
 
 .btn {
@@ -643,7 +652,7 @@ footer p {
         transform 0.35s ease,
         box-shadow 0.35s ease;
 }
-
+ 
 .timeline__item:hover .timeline__dot {
     transform: scale(1.25);
     box-shadow: 0 0 25px rgba(160, 68, 255, 0.9);
