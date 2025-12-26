@@ -38,6 +38,12 @@ main {
     margin: 0 auto;
 }
 
+/* transitions */
+
+a, button, .cards__item {
+    transition: all 0.3s ease;
+}
+
 /* hero */
 
 
@@ -59,7 +65,8 @@ main {
 
 .hero h1 {
     font-size: 64px;        
-    font-weight: 700;
+    font-weight: 900;
+    font-family: 'Notable', sans-serif;
 }
 
 .hero p {
@@ -119,7 +126,7 @@ main {
 }
 
 .navbar a:hover {
-    color: #4816bd;
+    color: #8b5cf6;
     transform: scale(1.08);
 }
 
@@ -207,12 +214,15 @@ header {
 }
 
 .header__login a {
-    text-decoration: none;
-    font-weight: bold;
-    gap: 3px;
+    text-decoration:none;
+    font-weight:bold;
+    gap:3px;
+    color:white;
+    text-align:center;
     color: #cbd5f5;
-    text-align: center;
-    transition: 0.3s ease;
+    transition: 0.3s;
+    font-size: 1rem;
+    display: inline-block;
 }
 
 .header__login a:hover {
@@ -288,6 +298,19 @@ footer p {
     gap: 10px;
 }
 
+.social img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgb(191 140 255);
+    border-radius: 50%;
+}
+.social img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(160, 68, 255, 0.7);
+}
+
 
 /*services*/
 
@@ -347,7 +370,9 @@ footer p {
 
 .services__item:hover {
     transform: translateY(-6px) scale(1.05);
-    border:1px solid rgba(255, 255, 255, 0.7)
+    border:1px solid rgba(255, 255, 255, 0.7);
+    background: linear-gradient( 180deg, #1C2761, #101636);
+
 }
 
 .services__item img {
@@ -417,8 +442,8 @@ footer p {
 
 .cards__item:hover {
     transform: translateY(-10px) scale(1.04);
-    border:1px solid rgba(255, 255, 255, 0.7)
-
+    border:1px solid rgba(255, 255, 255, 0.7);
+    background: linear-gradient( 180deg, #1C2761, #101636);
 }
 
 
@@ -427,7 +452,7 @@ footer p {
     width: 100%;
     height: 40%;
     border-radius: 20px;
-    background-image: url(imgs/soundcloud.jpg);
+    background-image: url(imgs/soundcloud.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -435,7 +460,7 @@ footer p {
 }
 
 .link_soundcloud {
-    background: linear-gradient(135deg, #ff7a18, #ff9f1c);
+    background: linear-gradient(135deg, #FE4C00, #ff9f1c);
 }
 
 .cards__item-img2 {
@@ -457,7 +482,7 @@ footer p {
     width: 100%;
     height: 40%;
     border-radius: 20px;
-    background-image: url(imgs/spotify.png);
+    background-image: url(imgs/spotify.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -476,7 +501,9 @@ footer p {
 }
 
 .cards__item-content p{
-        color: #cbd5f5;
+    color: #cbd5f5; 
+    text-align: center;
+        
 }
 
 .cards__item-content h3{
@@ -577,6 +604,7 @@ footer p {
     color: #cbd5f5;
     line-height: 1.7;
 }
+
 /* About – Timeline */
 
 .about-timeline {
